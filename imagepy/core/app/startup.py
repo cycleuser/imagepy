@@ -29,7 +29,7 @@ def start():
     import wx.lib.agw.advancedsplash as AS
 
     app = wx.App(False)
-
+    '''
     bitmap = wx.Bitmap('data/logolong.png', wx.BITMAP_TYPE_PNG)
     shadow = wx.Colour(255,255,255)
 
@@ -38,7 +38,7 @@ def start():
         AS.AS_CENTER_ON_PARENT |
         AS.AS_SHADOW_BITMAP,
         shadowcolour=shadow)
-    asp.Update()
+    asp.Update()'''
 
     uistyle = Source.manager('config').get('uistyle') or 'imagepy'
     frame = ImageJ(None) if uistyle == 'imagej' else ImagePy(None)
