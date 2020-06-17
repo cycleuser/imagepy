@@ -1,3 +1,31 @@
+## Modification 和原版的区别
+
+* 去掉了开屏动画的载入 Removed Starup Logo
+* 我即便硬编码写了这个目录也没能在python setup.py install的时候复制成功这个文件夹，Messed up Setup.py
+
+## Installation 安装方法：
+```Bash
+cd ~
+git clone https://github.com/cycleuser/imagepy
+cd imagepy
+python3 setup.py install
+```
+
+## How to Run 运行方法：
+```Bash
+pythonw -m imagepy
+```
+
+安装完毕后，需要将data文件夹手动复制过去，
+比如我用的是 anaconda3，对应位置就是 /Users/cycleuser/opt/anaconda3/lib/python3.7/site-packages/imagepy-0.22-py3.7.egg
+那么就将这个 repo 中的 data 文件夹 放置成 /Users/cycleuser/opt/anaconda3/lib/python3.7/site-packages/imagepy-0.22-py3.7.egg/data
+
+就可以加载出logo和水印了。
+
+
+
+
+
 # Introduction
 
 ImagePy is an open source image processing framework written in Python. Its UI interface, image data structure and table data structure are wxpython-based, Numpy-based and pandas-based respectively. Furthermore, it supports any plug-in based on Numpy and pandas, which can talk easily between scipy.ndimage, scikit-image, simpleitk, opencv and other image processing libraries.
